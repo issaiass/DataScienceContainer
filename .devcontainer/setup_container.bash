@@ -2,7 +2,7 @@
 
 # Create user data_science read, write execute (0440 for read-only), and allow it to install stuff. 
 adduser --disabled-password --gecos "docker user" data_science
-echo 'data_science ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/data_science && chmod 0777 /etc/sudoers.d/data_science
+echo 'data_science ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/data_science && chmod 0444 /etc/sudoers.d/data_science
 chown -R data_science /app
 
 # Suppress deprecated setuptools warning
